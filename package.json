@@ -1,0 +1,29 @@
+{
+  "name": "mynotes-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --watch --env-file .env src/index.js",
+    "test": "NODE_OPTIONS=--experimental-vm-modules NODE_NO_WARNINGS=1 jest --verbose"
+  },
+  "keywords": [],
+  "author": "Nelson David Argumedo",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "@prisma/client": "^5.17.0",
+    "bcrypt": "^5.1.1",
+    "express": "^4.19.2",
+    "express-validator": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "morgan": "^1.10.0",
+    "prisma": "^5.17.0",
+    "supertest": "^7.0.0"
+  }
+}
