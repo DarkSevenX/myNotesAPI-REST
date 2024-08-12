@@ -30,6 +30,8 @@ Esta es una API RESTful construida con **Express** y **Prisma ORM** que proporci
 - **Prisma ORM**: ORM para la gestión de base de datos.
 - **JWT**: Para autenticación y autorización.
 - **bcryptjs**: Para cifrado de contraseñas.
+- **swagger-jsdocs**: Para generar la documentacion interactiva
+- **express-validator**: Para validación de entradas
 
 ## Instalación
 
