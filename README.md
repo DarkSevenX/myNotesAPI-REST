@@ -3,6 +3,9 @@
 
 Esta es una API RESTful construida con **Express** y **Prisma ORM** que proporciona autenticación mediante **JSON Web Tokens (JWT)**. La API permite la gestión de usuarios y notas, con rutas para registro, inicio de sesión y operaciones CRUD para notas.
 
+## live preview
+https://my-notes-apirest.glitch.me/api/docs
+
 ## Índice
 
 - [Características](#características)
