@@ -2,3 +2,5 @@
 node_modules
 auth.http
 notes.http
+.env
+prisma/dev.db
