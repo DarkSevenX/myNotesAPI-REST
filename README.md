@@ -62,7 +62,13 @@ https://my-notes-apirest.glitch.me/api/docs
    ```
 
 ## Configuración
-
+La propiedad `data source provider` está por defecto en `sqlite` recuerda cambiarlo a tu base de datos de preferencia
+```
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+```
 Crea un archivo `.env` en la raíz del proyecto con la siguiente configuración:
 
 ```env
