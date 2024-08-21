@@ -4,7 +4,7 @@ import noteRouter from './routes/noteRoutes.js'
 import autRouter from './routes/authRoutes.js'
 
 const app = express()
-// cambio en branch desarrollo
+
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 
