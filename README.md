@@ -62,18 +62,33 @@ https://my-notes-apirest.glitch.me/api/docs
    ```
 
 ## Configuración
-La propiedad `data source provider` está por defecto en `sqlite` recuerda cambiarlo a tu base de datos de preferencia
+La propiedad `data source provider` está por defecto en `sqlite` recuerda cambiarlo a tu base de datos de preferencia y en `url` pones la ulr de tu base de datos o puedes importarla desde el archivo `.env`
 ```
 datasource db {
   provider = "sqlite"
-  url      = env("DATABASE_URL")
+  url      = "file:./db.dev"
 }
 ```
 Crea un archivo `.env` en la raíz del proyecto con la siguiente configuración:
 
 ```env
-DATABASE_URL="tu_url_de_base_de_datos"
 SECRET="tu_clave_secreta_para_jwt"
+```
+
+## Importante
+esta api esta configurada para despelgarse con turso, si no estas usando una base de datos desplegada en ese hosting, solo comenta las siguientes lineas en el archivo db.js
+
+```javascript
+
+
+// const libsql = createClient({
+//     url: process.env.TURSO_DATABASE_URL,
+//     authToken: process.env.TURSO_AUTH_TOKEN,
+//   });
+
+// const adapter = new PrismaLibSQL(libsql);
+const prisma = new PrismaClient() // no olvides quitar el parametro { adapter }
+
 ```
 
 ## Uso
