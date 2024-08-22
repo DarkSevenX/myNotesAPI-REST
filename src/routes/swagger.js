@@ -7,7 +7,11 @@ const options = {
     openapi: '3.0.0',
     info: {
       title: 'myNotes API',
-      version: '1.0.0'
+      version: '1.0.0',
+    },
+    externalDocs: {
+      description: 'Visita mi GitHub ☠️',
+      url: 'https://github.com/DarkSevenX'
     },
   },
   apis: ['./src/routes/*.js'],
