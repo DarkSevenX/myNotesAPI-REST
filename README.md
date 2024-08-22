@@ -4,7 +4,7 @@
 Esta es una API RESTful construida con **Express** y **Prisma ORM** que proporciona autenticación mediante **JSON Web Tokens (JWT)**. La API permite la gestión de usuarios y notas, con rutas para registro, inicio de sesión y operaciones CRUD para notas.
 
 ## live preview (Swagger docs)
-https://strong-corrie-nokosu-410f07a8.koyeb.app/api/docs/
+[My notes API rest docs](https://mynotes-api.koyeb.app/api/docs/)
 
 ## Índice
 
