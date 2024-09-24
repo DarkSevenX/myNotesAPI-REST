@@ -1,10 +1,12 @@
 import express from 'express'
 import morgan from 'morgan'
+import cors from 'cors'
 import noteRouter from './routes/noteRoutes.js'
 import autRouter from './routes/authRoutes.js'
 
 const app = express()
-// cambio en branch desarrollo
+
+app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 

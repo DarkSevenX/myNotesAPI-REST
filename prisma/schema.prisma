@@ -28,6 +28,7 @@ model Note {
   title String?
   content String
   createdAt DateTime @default(now())
+  color String
   userId Int
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 

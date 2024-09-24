@@ -11,6 +11,7 @@ CREATE TABLE "Notes" (
     "title" TEXT,
     "content" TEXT NOT NULL,
     "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "color" TEXT NOT NULL,
     "userId" INTEGER NOT NULL,
     CONSTRAINT "Notes_userId_fkey" FOREIGN KEY ("userId") REFERENCES "Users" ("id") ON DELETE CASCADE ON UPDATE CASCADE
 );

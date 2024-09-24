@@ -4,7 +4,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node --watch --env-file .env src/index.js",
+    "start": "node src/index.js",
+    "dev": "node --watch --env-file .env src/index.js",
     "test": "NODE_OPTIONS=--experimental-vm-modules NODE_NO_WARNINGS=1 jest --verbose"
   },
   "keywords": [],
@@ -16,6 +17,7 @@
     "@prisma/adapter-libsql": "^5.18.0",
     "@prisma/client": "^5.17.0",
     "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
     "express": "^4.19.2",
     "express-validator": "^7.1.0",
     "jsonwebtoken": "^9.0.2",
