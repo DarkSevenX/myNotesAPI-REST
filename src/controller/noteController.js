@@ -44,12 +44,13 @@ const getNoteById = async (req,res) => {
 
 const createNote = async (req,res) => {
   try {
-    const { title, content } = req.body
+    const { title, content, color } = req.body
 
     const newNote = await prisma.note.create({
       data: {
         title: title,
         content: content,
+        color: color,
         user:{
           connect: {
             id: req.user.id
@@ -65,8 +66,8 @@ const createNote = async (req,res) => {
     res.json(newNote)
     
   } catch (error) {
-    res.status(500).json({error: error.meta.cause})
-    console.log(error.meta.cause)
+    res.status(500).json({error: error})
+    console.log(error)
 
   }
 }

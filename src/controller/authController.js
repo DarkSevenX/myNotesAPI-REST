@@ -63,3 +63,25 @@ export const login = async (req,res) => {
     res.json({error: error.message})
   }
 }
+
+export const getUser = async (req, res) => {
+  try {
+    const user = await prisma.user.findUnique({
+      where: {
+        id: req.user.id
+      },
+      select: {
+        username: true
+      }
+    })
+
+    if (!user) {
+      return res.status(404).json({message: 'user not found'})
+    }
+
+    res.json(user)
+  } catch (error) {
+    console.log(error.message)
+    return res.json({error: error.message})
+  }
+}

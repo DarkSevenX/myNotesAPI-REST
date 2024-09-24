@@ -31,6 +31,10 @@ export const noteValidator = [
     .exists()
     .notEmpty()
     .withMessage('Content is required'),
+  body('color')
+    .exists()
+    .notEmpty()
+    .withMessage('Color is required'),
   (req,res,next) => {
     result(req,res,next)
   }
@@ -38,9 +42,7 @@ export const noteValidator = [
 
 export const patchNoteValidator = [
   body('title')
-    .optional()
-    .notEmpty()
-    .withMessage('title not empty'),
+    .optional(),
   body('content')
     .optional()
     .notEmpty(),

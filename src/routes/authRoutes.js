@@ -1,12 +1,14 @@
 import { Router } from "express";
-import { register, login } from "../controller/authController.js";
-import {authValidator} from "../middleware/validator.js";
+import { register, login, getUser } from "../controller/authController.js";
+import { authValidator } from "../middleware/validator.js";
+import { verifyToken } from "../middleware/authJwt.js";
 
 const router = Router()
 
 router
   .post('/register',authValidator, register)
   .post('/login',authValidator, login)
+  .get('/user', verifyToken, getUser) 
 
 /**
   * @swagger
